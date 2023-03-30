@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    .main {
+      height: 200px;
+      width: 300px;
+      border: rgb(154, 153, 158) solid 1px;
+      /* margin: -100px -300px; */
+      position: relative;
+      border-radius: 0px;
+      /* 添加动画函数用animatio关键属性 */
+      animation: loginOut ease-out 2s 0s forwards;
+    }
+    .box {
+      position: absolute;
+      bottom: 0px;
+      width: 150px;
+      height: 40px;
+      border-top: rgb(154, 153, 158) solid 1px;
+      text-align: center;
+      line-height: 40px;
+      font-size: large;
+      cursor: pointer;
+    }
+    .login {
+      position: absolute;
+      right: 0px;
+      border-left: rgb(154, 153, 158) solid 1px;
+    }
+    .quit:hover {
+      background-color: rgb(139, 139, 139);
+      border-bottom-left-radius: 20px;
+    }
+    .login:hover {
+      background-color: rgb(139, 139, 139);
+      border-bottom-right-radius: 20px;
+    }
+    /* 定义动画初始起始值 可以是该盒子里没有的属性 */
+    @keyframes loginOut {
+      from {
+        /* 初始值from */
+        border-radius: 0px;
+        margin: -200px -300px;
+        background-color: white;
+        transform: rotate(0deg);
+      }
+      to {
+        /* 最终值to */
+        background-color: rgb(232, 232, 232);
+        margin: 300px auto;
+        border-radius: 20px;
+        transform: rotate(360deg);
+      }
+      /* 也可以添加多过程10%，20%，30%，40%...来更换from。。to两个状态 */
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="inp"></div>
+      <div class="box quit">取消</div>
+      <div class="box login">登录</div>
+    </div>
+  </body>
+</html>
