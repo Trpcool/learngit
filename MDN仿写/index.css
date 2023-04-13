@@ -1,0 +1,727 @@
+body {
+  margin: 0px;
+}
+/* header部分 */
+header {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(27, 27, 27);
+  border-bottom: rgb(122, 122, 122) solid 1px;
+  position: fixed;
+  z-index: 1;
+}
+header .logo {
+  margin-left: 66px;
+  height: 80px;
+  width: 100px;
+  color: white;
+  float: left;
+  text-align: center;
+  line-height: 80px;
+  font-size: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.logo::before {
+  content: "M";
+  color: rgb(114, 146, 206);
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+  right: 2px;
+}
+.logo::after {
+  content: "_";
+  color: rgb(114, 146, 206);
+  font-size: 30px;
+}
+header .h-l {
+  height: 60px;
+  width: 450px;
+  /* border: white solid 1px; */
+  float: left;
+  margin-left: 30px;
+  user-select: none;
+}
+/* 初始化a标签 */
+a {
+  text-decoration: none;
+  color: white;
+}
+/* 头部左边下拉菜单 */
+.refe {
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  /* background-color: antiquewhite;*/
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(189, 189, 189);
+  float: left;
+  margin-right: 40px;
+}
+.refe span {
+  display: block;
+  height: 40px;
+  width: 100px;
+  /* background-color: red; */
+}
+.refe span::after {
+  display: block;
+  content: "";
+  height: 8px;
+  width: 100px;
+  /* background-color: aliceblue; */
+}
+.mdn span::after {
+  display: block;
+  content: "";
+  height: 8px;
+  width: 100px;
+  /* background-color: aliceblue; */
+}
+.guid {
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  /* background-color: rgb(0, 0, 0); */
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(189, 189, 189);
+  float: left;
+  margin-right: 40px;
+}
+.guid span::after {
+  display: block;
+  content: "";
+  height: 8px;
+  width: 100px;
+  /* background-color: aliceblue; */
+}
+.mdn {
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  /* background-color: rgb(0, 0, 0); */
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(189, 189, 189);
+  float: left;
+  margin-right: 40px;
+}
+/* 下拉属性 */
+.refe:hover {
+  background-color: rgb(76, 94, 127);
+  color: rgb(137, 176, 250);
+}
+.guid:hover {
+  background-color: rgb(76, 94, 127);
+  color: rgb(137, 176, 250);
+}
+.mdn:hover {
+  background-color: rgb(76, 94, 127);
+  color: rgb(137, 176, 250);
+}
+/* 下拉属性列表 */
+.list-r {
+  height: 530px;
+  width: 300px;
+  border: rgb(122, 122, 122) solid 1px;
+  background-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  display: none;
+  position: relative;
+  top: 8px;
+}
+.list-g {
+  height: 380px;
+  width: 300px;
+  border: rgb(122, 122, 122) solid 1px;
+  background-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  display: none;
+  position: relative;
+  /* top: 8px; */
+}
+.list-m {
+  height: 305px;
+  width: 300px;
+  border: rgb(122, 122, 122) solid 1px;
+  background-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  display: none;
+  position: relative;
+  /* 防止背景旋转浮动在表面会影响hover属性 */
+  z-index: 2;
+}
+/* 下拉列表hover属性 */
+.refe:hover .list-r {
+  display: block;
+}
+.guid:hover .list-g {
+  display: block;
+}
+.mdn:hover .list-m {
+  display: block;
+}
+.list-r a {
+  display: block;
+  height: 70px;
+  width: 280px;
+  border: rgb(27, 27, 27) solid 1px;
+  border-radius: 5px;
+  margin: 3.5px 10px;
+}
+
+.list-g a {
+  display: block;
+  height: 70px;
+  width: 280px;
+  border: rgb(27, 27, 27) solid 1px;
+  border-radius: 5px;
+  margin: 3.5px 10px;
+}
+.list-m a {
+  display: block;
+  height: 70px;
+  width: 280px;
+  border: rgb(27, 27, 27) solid 1px;
+  border-radius: 5px;
+  margin: 3.5px 10px;
+}
+.list-r a:hover {
+  background-color: rgb(121, 121, 121, 0.5);
+}
+.list-g a:hover {
+  background-color: rgb(121, 121, 121, 0.5);
+}
+.list-m a:hover {
+  background-color: rgb(121, 121, 121, 0.5);
+}
+/* 下拉菜单每个选项 */
+.content {
+  height: 40px;
+  margin-top: 20px;
+  width: 240x;
+  margin-left: 20px;
+  border-left: rgb(187, 86, 97) solid 4px;
+}
+/* 每个选项左边的边框颜色 */
+.refe .list-r a:nth-child(2) .content {
+  border-left: rgb(106, 134, 187) solid 4px;
+}
+.refe .list-r a:nth-child(3) .content {
+  border-left: rgb(131, 121, 8) solid 4px;
+}
+.refe .list-r a:nth-child(4) .content {
+  border-left: rgb(8, 136, 67) solid 4px;
+}
+.refe .list-r a:nth-child(5) .content {
+  border-left: rgb(130, 105, 187) solid 4px;
+}
+.refe .list-r a:nth-child(6) .content {
+  border-left: rgb(255, 255, 255) solid 4px;
+}
+.refe .list-r a:nth-child(7) .content {
+  border-left: rgb(255, 255, 255) solid 4px;
+}
+/* guid */
+.guid .list-g a:nth-child(1) .content {
+  border-left: rgb(187, 84, 109) solid 4px;
+}
+.guid .list-g a:nth-child(2) .content {
+  border-left: rgb(187, 84, 109) solid 4px;
+}
+.guid .list-g a:nth-child(3) .content {
+  border-left: rgb(106, 134, 187) solid 4px;
+}
+.guid .list-g a:nth-child(4) .content {
+  border-left: rgb(131, 121, 89) solid 4px;
+}
+.guid .list-g a:nth-child(5) .content {
+  border-left: rgb(255, 255, 255) solid 4px;
+}
+/* mdn */
+.mdn .list-m a .content {
+  border-left: rgb(255, 151, 160) solid 4px;
+}
+/* 每个选项内容布局 */
+.content .title {
+  height: 20px;
+  width: 240px;
+  /* background-color: rgb(0, 136, 255); */
+  margin-left: 10px;
+  text-align: start;
+  line-height: 20px;
+  position: relative;
+  top: -5px;
+}
+.content .express {
+  height: 20px;
+  width: 260px;
+  margin-left: 10px;
+  font-size: 2px;
+  /* background-color: rgb(255, 145, 0); */
+  text-align: start;
+  line-height: 20px;
+  position: relative;
+  top: 5px;
+}
+
+/* 白天黑夜模式 */
+.veiw {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  /* border: red solid 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 18px;
+}
+.veiw:hover {
+  background-color: rgb(151, 151, 151);
+  color: rgb(218, 218, 218);
+}
+
+.veiw .veiw-m {
+  height: 30px;
+  width: 30px;
+  /* border: white solid 1px; */
+  float: left;
+  text-align: center;
+}
+.veiw-m img {
+  margin-top: 6px;
+}
+.veiw span {
+  line-height: 40px;
+}
+/* 夜晚模式隐藏菜单 */
+.model-mnu {
+  display: none;
+  height: 120px;
+  width: 160px;
+  color: aliceblue;
+  border: rgb(114, 114, 114) solid 1px;
+  background-color: rgb(52, 52, 52);
+  border-radius: 5px;
+  margin-top: 3px;
+  position: absolute;
+  z-index: 10;
+}
+.model-mnu > div {
+  height: 30px;
+  width: 140px;
+  border-radius: 5px;
+  margin-top: 6px;
+  margin-left: 10px;
+  float: left;
+  cursor: pointer;
+  border: rgb(52, 52, 52) solid 1px;
+  user-select: none;
+}
+.model-mnu > div:hover {
+  background-color: rgb(205, 205, 205) !important;
+  border: rgb(71, 71, 71) solid 1px !important;
+  box-shadow: 0px 0px 1px 1px rgb(71, 71, 71) !important;
+}
+.model-mnu img {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.model-mnu span {
+  display: block;
+  float: left;
+  line-height: 30px;
+  font-size: 15px;
+}
+/* 头部右边部分 */
+.h-r {
+  height: 60px;
+  width: 540px;
+  /* background-color: aqua; */
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  /* display: flex;
+      justify-content: space-around;
+      align-items: center; */
+}
+.model {
+  float: right;
+}
+/* 搜索框样式 */
+.serch {
+  height: 35px;
+  width: 90px;
+  border-radius: 20px;
+  border: rgb(114, 114, 114) solid 1px;
+  position: relative;
+  float: right;
+  cursor: text;
+  margin-top: 14.5px;
+  margin-right: 10px;
+  margin-left: 12px;
+}
+/* serch加一个伪元素，用于显示那个蓝色的横杆 */
+.serch::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 20px;
+  background-color: rgb(140, 180, 255);
+  position: absolute;
+  right: 40px;
+  bottom: 5px;
+}
+.serch img {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  user-select: none;
+  border-radius: 3px;
+}
+.serch img:hover {
+  background-color: rgb(133, 133, 133);
+}
+/* 登录Login */
+.login {
+  height: 20px;
+  width: 50px;
+  color: rgb(205, 205, 171);
+  /* background-color: white; */
+  float: right;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.getmp {
+  height: 30px;
+  width: 130px;
+  background-color: white;
+  float: right;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 40px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.getmp:hover {
+  background-color: rgb(205, 205, 205);
+}
+/* 中间黑色背景加大搜索框部分 */
+/* 中央黑色背景部分 */
+.main-a {
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  z-index: 0;
+  /* margin-top: 80px; */
+  position: relative;
+  top: 80px;
+}
+/* 背景svg特效 */
+svg {
+  /* height: 400px;
+      width: 400px; */
+  font-size: 1.5rem;
+  font-weight: 300;
+  user-select: none;
+  margin-top: -540px;
+  margin-left: 600px;
+  animation: move 180s linear 0s infinite;
+}
+/* 旋转特效 */
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+svg > text {
+  fill: rgb(114, 114, 114);
+}
+/* m-m中间三个部分 */
+.main-a .m-m {
+  margin: 0px auto;
+  height: 400px;
+  width: 970px;
+  /* margin-top: 80px; */
+  /* border: red solid 2px; */
+}
+.m-m .top {
+  line-height: 80px;
+  height: 200px;
+  width: 970px;
+  /* border: blue solid 1px; */
+  font-size: 50px;
+  margin-left: 40px;
+}
+.top .s2 {
+  display: block;
+}
+.m-m .center {
+  margin-left: 40px;
+  height: 60px;
+  width: 970;
+  /* border: white solid 1px; */
+  line-height: 60px;
+  /* position: relative; */
+}
+
+.m-m .top .s1 {
+  text-decoration: underline;
+  text-decoration-color: rgb(140, 180, 255);
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.2em;
+  /* z-index: 3; */
+  /* position: relative; */
+}
+.bigserch {
+  height: 140px;
+  width: 970px;
+  /* border: yellow solid 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: cell;
+}
+.bigserch .s-s {
+  display: block;
+  height: 80px;
+  width: 800px;
+  background-color: rgb(1, 1, 1, 0.1);
+  border-radius: 50px;
+  caret-color: aliceblue;
+  padding: 40px;
+  box-sizing: border-box;
+}
+/* 鼠标选中聚焦搜索框触发属性 */
+.s-s:focus {
+  /* 去掉聚焦默认样式 */
+  outline: none;
+  border: rgb(255, 255, 255) solid 3px;
+}
+/* 搜索框内的放大镜 */
+.bigserch img {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  right: 50px;
+}
+/* 是个内容盒子部分 */
+.main-b {
+  height: 550px;
+  width: 900px;
+  /* border: red solid 1px; */
+  margin: 0px auto;
+  position: relative;
+  top: 80px;
+}
+/* 注意这儿初始化化所有h2标题 */
+h2 {
+  margin: 0px;
+}
+.main-b .b-t {
+  height: 60px;
+  width: 900px;
+  /* background-color: blue; */
+  line-height: 60px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  /*  */
+}
+h2 {
+  font-weight: 500;
+}
+/* 四个盒子的大盒子属性 */
+.b-boxs {
+  height: 490px;
+  width: 900px;
+  /* border: rebeccapurple solid 1px; */
+}
+/* 每个盒子属性 */
+.b-boxs .box {
+  width: 420px;
+  height: 220px;
+  margin: 10px 10px;
+
+  border: rgb(205, 205, 205) solid 1px;
+  border-radius: 10px;
+  float: left;
+}
+.b-boxs .box:hover {
+  box-shadow: 0px 0px 2px 1px rgb(194, 194, 194);
+}
+/* 一个盒子下的子属性布局 */
+.b-boxs .box a {
+  display: block;
+  height: 40px;
+  width: 420px;
+  color: black;
+  /* background-color: aqua; */
+  line-height: 40px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.b-boxs .box h3 {
+  margin: 0px;
+  height: 60px;
+  width: 420px;
+  /* background-color: aquamarine; */
+  line-height: 60px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 23px;
+  cursor: pointer;
+}
+.b-boxs .box p {
+  margin: 0px;
+  height: 120px;
+  width: 420px;
+  /* background-color: antiquewhite; */
+  box-sizing: border-box;
+  padding: 20px;
+}
+.b-boxs .box a:hover {
+  text-decoration: underline;
+}
+.b-boxs .box h3:hover {
+  text-decoration: underline;
+}
+/* news部分 */
+.main-c {
+  margin: 0px auto;
+  /* height: 800px; */
+  width: 900px;
+  /* border: black solid 1px; */
+  /* 由于header设置固定，由于脱离文档流，所以之后盒子都要设置相对位置保持位置不变 */
+  position: relative;
+  top: 80px;
+}
+.main-c h2 {
+  height: 60px;
+  width: 900px;
+  /* background-color: antiquewhite; */
+  box-sizing: border-box;
+  padding-left: 10px;
+  line-height: 60px;
+}
+/* 初始p标签 */
+p {
+  margin: 0px;
+  padding: 0px;
+}
+/* 初始化u标签 */
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.main-c ul li {
+  display: block;
+  margin-left: 0px;
+  height: 80px;
+  width: 900px;
+  /* background-color: rgb(249, 249, 251); */
+  color: black;
+  /* background-color: aqua;
+  margin-bottom: 30px; */
+  border-radius: 5px;
+}
+.main-c ul li .l-p {
+  display: block;
+  width: 400px;
+  height: 60px;
+  /*  */
+  float: left;
+  margin-left: 15px;
+}
+.main-c .l-p a {
+  color: black;
+}
+.l-t {
+  display: block;
+  height: 30px;
+  width: 400px;
+  /* border: black solid 1px; */
+  line-height: 30px;
+  margin-top: 10px;
+}
+.l-c {
+  display: block;
+  width: 400px;
+  height: 30px;
+  font-size: 10px;
+  line-height: 20px;
+}
+.l-t:hover {
+  text-decoration: underline;
+}
+.l-c:hover {
+  text-decoration: underline;
+}
+.main-c ul li .r-p {
+  display: block;
+  width: 200px;
+  height: 60px;
+  /* background-color: rgb(255, 255, 125); */
+  float: right;
+  text-align: end;
+  line-height: 60px;
+  font-size: small;
+  color: rgb(27, 27, 27);
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-right: 10px;
+  /* color: white; */
+}
+#flag {
+  background-color: rgb(249, 249, 251);
+}
+.last {
+  /* 由于头部都绝对位移后面所有部分都要绝对位移 */
+  position: relative;
+  top: 80px;
+  height: 400px;
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+  display: flex;
+  justify-content: center;
+}
+.last img {
+  height: 400px;
+  width: 900px;
+}
+footer {
+  position: relative;
+  top: 80px;
+  height: 400px;
+  width: 100%;
+  background-color: white;
+}
+footer .f-top {
+  height: 60%;
+  width: 96%;
+  margin: 0px 2%;
+  border-bottom: rgb(205, 205, 205) solid 1px;
+}

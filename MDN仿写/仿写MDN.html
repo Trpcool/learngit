@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="index.css" />
+
+  <body>
+    <!--整个网页页面 -->
+    <header>
+      <div class="logo">mdn</div>
+      <!-- 下拉菜单 -->
+      <div class="h-l">
+        <div class="refe">
+          <span>References</span>
+          <div class="list-r">
+            <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">
+              <div class="content">
+                <div class="title">HTML</div>
+                <div class="express">Structure of content on the web</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content" border:blue soid 4px>
+                <div class="title">CSS</div>
+                <div class="express">Code used to describe docment style</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">JavaScript</div>
+                <div class="express">General-purpose scripting language</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">HTTP</div>
+                <div class="express">
+                  protcol for transmitting web resources
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">Web APIs</div>
+                <div class="express">
+                  interfaces for building web applications
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">Web Extensions</div>
+                <div class="express">Developing extensions for web browers</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">Web Technology</div>
+                <div class="express">
+                  Web technology reference for developers
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!--guids下拉菜单  -->
+        <div class="guid">
+          <span>Guides</span>
+          <div class="list-g">
+            <a href="">
+              <div class="content">
+                <div class="title">MDN Learning Area</div>
+                <div class="express">Learn web development</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">HTML</div>
+                <div class="express">
+                  Learn to structure web content with HTML
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">CSS</div>
+                <div class="express">Learn to style content using CSS</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">JavaScript</div>
+                <div class="express">Learn to run script int the brower</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">Accessibility</div>
+                <div class="express">
+                  Learn to make the web accessible to all
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!--  -->
+        <div class="mdn">
+          <span>MDN Plus</span>
+          <div class="list-m">
+            <a href="">
+              <div class="content">
+                <div class="title">Overveiw</div>
+                <div class="express">A customized MDN experience</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">Updeates</div>
+                <div class="express">
+                  All brower compatibility updates at a glance
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">Docmentation</div>
+                <div class="express">Learn how to use MDN Plus</div>
+              </div>
+            </a>
+            <a href="">
+              <div class="content">
+                <div class="title">FQA</div>
+                <div class="express">
+                  Frequently asked question about MDN Plus
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 头部搜索登录部分 -->
+      <div class="h-r">
+        <!-- get mdn...按钮 -->
+        <div class="getmp">Get MDN Plus</div>
+        <!-- 登录按钮 -->
+        <div class="login">Log in</div>
+        <div class="model">
+          <!-- h-r搜索框 -->
+          <div class="serch">
+            <img width="20px" height="20px" src="MDN-img/find.png" alt="" />
+          </div>
+
+          <!-- 模式 -->
+          <!-- 显示模式窗口 -->
+          <div class="veiw">
+            <div class="veiw-m">
+              <img
+                id="vm"
+                width="20px"
+                height="20px"
+                src="MDN-img/moon.png"
+                alt="no"
+              />
+            </div>
+            <span>Theme</span>
+          </div>
+
+          <!-- 下拉列表夜晚白天模式菜单 -->
+          <div class="model-mnu">
+            <div class="default">
+              <img
+                width="30px"
+                height="30px"
+                src="MDN-img/DarkTheme.png"
+                alt=""
+              />
+              <span>OS default</span>
+            </div>
+            <div class="night">
+              <img width="30px" hight="30px" src="MDN-img/sun.png" alt="" />
+              <span>Light</span>
+            </div>
+            <div class="dark">
+              <img width="30px" height="30px" src="MDN-img/moon.png" alt="" />
+              <span>Dark</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-a">
+      <div class="m-m">
+        <div class="top">
+          Resources for <span class="s1">Developer </span>,<span class="s2"
+            >by Developers</span
+          >
+        </div>
+        <div class="center">
+          Documenting web technologies,including CSS,HTML and JavaScript,since
+          2005.
+        </div>
+        <div class="bigserch">
+          <input class="s-s" type="text" /><img src="MDN-img/find.png" alt="" />
+        </div>
+      </div>
+      <!-- 背景旋转特效 -->
+      <svg
+        width="675"
+        height="675"
+        viewBox="0 0 675 675"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="mandala"
+      >
+        <title>Mandala</title>
+        <defs>
+          <path
+            d="M337.5,337.5 m-320,0 a320,320 0 1,1 640,0 a320,320 0 1,1 -640,0"
+            id="circle1"
+          ></path>
+          <path
+            d="M337.5,337.5 m-280,0 a280,280 0 1,1 560,0 a280,280 0 1,1 -560,0"
+            id="circle2"
+          ></path>
+          <path
+            d="M337.5,337.5 m-240,0 a240,240 0 1,1 480,0 a240,240 0 1,1 -480,0"
+            id="circle3"
+          ></path>
+          <path
+            d="M337.5,337.5 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0"
+            id="circle4"
+          ></path>
+          <path
+            d="M337.5,337.5 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0"
+            id="circle5"
+          ></path>
+        </defs>
+        <text class="mandala-accent-1" dy="70" textLength="2010">
+          <textPath textLength="2010" href="#circle1">
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            &nbsp;&nbsp;&nbsp;/
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+            /
+            <tspan>/</tspan>
+          </textPath>
+        </text>
+        <text class="mandala-accent-2" dy="70" textLength="1760">
+          <textPath textLength="1760" href="#circle2">
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            &nbsp;&nbsp;+
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+            +
+            <tspan>+</tspan>
+          </textPath>
+        </text>
+        <text class="mandala-accent-3" dy="70" textLength="1507">
+          <textPath textLength="1507" href="#circle3">
+            <tspan>{</tspan>
+            {
+            <tspan>{</tspan>
+            {&nbsp;
+            <tspan>}</tspan>
+            }
+            <tspan>}</tspan>
+            }&nbsp;&nbsp;
+            <tspan>{</tspan>
+            {
+            <tspan>{</tspan>
+            {&nbsp;
+            <tspan>}</tspan>
+            }
+            <tspan>}</tspan>
+            }&nbsp;&nbsp;
+            <tspan>{</tspan>
+            {
+            <tspan>{</tspan>
+            {&nbsp;
+            <tspan>}</tspan>
+            }
+            <tspan>}</tspan>
+            }&nbsp;&nbsp;
+            <tspan>{</tspan>
+            {
+            <tspan>{</tspan>
+            {&nbsp;
+            <tspan>}</tspan>
+            }
+            <tspan>}</tspan>
+            }&nbsp;&nbsp;
+            <tspan>{</tspan>
+            {
+            <tspan>{</tspan>
+            {&nbsp;
+            <tspan>}</tspan>
+            }
+            <tspan>}</tspan>
+            }&nbsp;&nbsp;
+            <tspan>{</tspan>
+            {
+            <tspan>{</tspan>
+            {&nbsp;
+            <tspan>}</tspan>
+            }
+            <tspan>}</tspan>
+            }&nbsp;&nbsp;
+          </textPath>
+        </text>
+        <text class="mandala-accent-4" dy="70" textLength="1257">
+          <textPath textLength="1257" href="#circle4">
+            &nbsp;&nbsp;&nbsp;../../ &nbsp;&nbsp;&nbsp;../../
+            &nbsp;&nbsp;&nbsp;../../ &nbsp;&nbsp;&nbsp;../../
+            &nbsp;&nbsp;&nbsp;../../ &nbsp;&nbsp;&nbsp;../../
+            &nbsp;&nbsp;&nbsp;../../
+          </textPath>
+        </text>
+        <text class="mandala-accent-5" dy="70" textLength="1005">
+          <textPath textLength="1005" href="#circle5">
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+            <tspan>&lt;&gt;</tspan>
+            &lt;/&gt;
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <!--四个盒子部分 -->
+    <div class="main-b">
+      <div class="b-t">
+        <h2 class="font-m">Feattured Articles</h2>
+      </div>
+      <div class="b-boxs">
+        <div class="box">
+          <a href="#" class="font-m">Web API接口参考</a>
+          <h3 class="font-m">初始WebGL</h3>
+          <p class="font-m">
+            WebGL 使得在支持 HTML 的 canvas
+            标签的浏览器中，不需要安装任何插件，便可以使用基于 OpenGL ES 2.0 的
+            API 在 canvas 中进行 2D 和 3D 渲染
+          </p>
+        </div>
+        <div class="box">
+          <a href="#" class="font-m">Web API接口参考</a>
+          <h3 class="font-m">初始WebGL</h3>
+          <p class="font-m">
+            WebGL 使得在支持 HTML 的 canvas
+            标签的浏览器中，不需要安装任何插件，便可以使用基于 OpenGL ES 2.0 的
+            API 在 canvas 中进行 2D 和 3D 渲染
+          </p>
+        </div>
+        <div class="box">
+          <a href="#" class="font-m">Web API接口参考</a>
+          <h3 class="font-m">初始WebGL</h3>
+          <p class="font-m">
+            WebGL 使得在支持 HTML 的 canvas
+            标签的浏览器中，不需要安装任何插件，便可以使用基于 OpenGL ES 2.0 的
+            API 在 canvas 中进行 2D 和 3D 渲染
+          </p>
+        </div>
+        <div class="box" class="font-m">
+          <a href="#" class="font-m">Web API接口参考</a>
+          <h3 class="font-m">初始WebGL</h3>
+          <p class="font-m">
+            WebGL 使得在支持 HTML 的 canvas
+            标签的浏览器中，不需要安装任何插件，便可以使用基于 OpenGL ES 2.0 的
+            API 在 canvas 中进行 2D 和 3D 渲染
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Latest News部分 -->
+    <div class="main-c">
+      <h2 class="font-m">Latest news</h2>
+      <ul>
+        <li id="flag">
+          <!-- 每个小li下2个span1个div -->
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#" class="font-m"
+                >Experimenting with advertising on MDN</a
+              >
+            </span>
+            <span class="l-c">
+              <a href="#" class="font-m">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p" class="font-m">5 months ago</p>
+        </li>
+        <li>
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#" class="font-m"
+                >Experimenting with advertising on MDN</a
+              >
+            </span>
+            <span class="l-c" class="font-m">
+              <a href="#" class="font-m">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p" class="font-m">5 months ago</p>
+        </li>
+        <li id="flag">
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#" class="font-m"
+                >Experimenting with advertising on MDN</a
+              >
+            </span>
+            <span class="l-c">
+              <a href="#" class="font-m">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p" class="font-m">5 months ago</p>
+        </li>
+      </ul>
+      <!-- Recent contributions部分 -->
+      <h2>Recent contributions</h2>
+      <ul>
+        <li id="flag">
+          <!-- 每个小li下2个span1个div -->
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li>
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li id="flag">
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li>
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li id="flag">
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li>
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li id="flag">
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+        <li>
+          <p class="l-p">
+            <span class="l-t">
+              <a href="#">Experimenting with advertising on MDN</a>
+            </span>
+            <span class="l-c">
+              <a href="#">developer.mozilla.org</a>
+            </span>
+          </p>
+          <p class="r-p">5 months ago</p>
+        </li>
+      </ul>
+    </div>
+    <!-- 倒数第二块黑色大板块 -->
+    <div class="last"><img src="MDN-img/footer.png" alt="" /></div>
+    <footer>
+      <div class="f-top"></div>
+      <div class="f-but"></div>
+    </footer>
+  </body>
+  <script src="仿写MDN.js"></script>
+</html>
