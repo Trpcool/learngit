@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>欢迎进入用户管理系统</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      .fixts {
+        display: none;
+        height: 100px;
+        width: 300px;
+        position: absolute;
+        top: 50px;
+        left: 30%;
+        border: rgb(180, 180, 180, 0.4) solid 2px;
+        background-color: rgba(196, 196, 196);
+        border-radius: 20px;
+        z-index: 1;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 25px;
+        transition: all linear 1s 0s;
+      }
+      .fixts input {
+        width: 50px;
+        height: 15px;
+        border: rgb(125, 125, 125, 0.5) solid 2px;
+        border-radius: 2px;
+      }
+      /* .fixts span {
+        position: absolute;
+        top: 7px;
+      } */
+      .fixts #yes {
+        position: relative;
+        left: 40%;
+        user-select: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- 修改框 -->
+      <div class="fixts">
+        <span>(请填入新的内容)</span>
+        姓名：<input type="text" id="tname" /><br />
+        年龄：<input type="text" id="tage" />
+        <span>性别：</span>
+        <!-- 此下拉菜单会有默认刷新 -->
+        <select name="sex" id="tsex">
+          <option value="保密">保密</option>
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+        <button id="yes">确认</button>
+      </div>
+      <h2>用户管理系统</h2>
+      <div class="input">
+        <h3>操作面板</h3>
+        <form action="#">
+          <div class="input-text">
+            ID: <input type="text" id="id" /> 姓名：<input
+              type="text"
+              id="name"
+            />
+            年龄：<input type="text" id="age" />
+            <span>性别：</span>
+            <!-- 此下拉菜单会有默认刷新 -->
+            <select name="sex" id="sex">
+              <option value="保密">保密</option>
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </div>
+          <div class="btn">
+            <button id="add">添加</button>
+            <button id="serch">搜索</button>
+            <button id="fix">修改</button>
+            <input type="reset" />
+          </div>
+        </form>
+      </div>
+      <h4>显示面板<img src="列表.png" alt="list" /></h4>
+      <div class="veiw">
+        <ul></ul>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

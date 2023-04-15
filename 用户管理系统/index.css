@@ -1,0 +1,130 @@
+.main {
+  /* margin: 50px auto; */
+  /* height: 600px; */
+  position: relative;
+  width: 800px;
+  border: rgb(180, 180, 180, 0.4) solid 2px;
+  background-color: rgba(196, 196, 196, 0.2);
+  border-radius: 20px;
+  padding-bottom: 10px;
+  animation: out 3s cubic-bezier(0, -0.9, 1, 1.97) 0s forwards;
+}
+@keyframes out {
+  from {
+    opacity: 0.2;
+    margin: -200px auto;
+    transform: scale(0.5);
+  }
+  to {
+    margin: 50px auto;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* 标题部分 */
+h2 {
+  text-align: center;
+}
+/* 整个输入部分以及按钮部分 */
+
+.input {
+  height: 100px;
+  width: 780px;
+  /* border: blue solid 1px; */
+  margin: 0px 9px 0px 9px;
+  position: relative;
+}
+/* 输入框的属性 */
+
+.input-text {
+  float: left;
+}
+#id,
+#name,
+#age,
+#sex {
+  width: 50px;
+  height: 15px;
+  border: rgb(125, 125, 125, 0.5) solid 2px;
+  border-radius: 2px;
+}
+#sex {
+  height: 20px;
+}
+#id,
+#name,
+#age,
+#sex:focus {
+  outline: none;
+}
+/* 按钮属性 */
+.btn {
+  /* height: 10px; */
+  width: 200px;
+  /* border: red solid 1px; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  float: left;
+}
+/* 显示面板 */
+h4 {
+  position: relative;
+  margin-left: 10px;
+}
+h4 img {
+  position: absolute;
+  height: 25px;
+  width: 30px;
+  right: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+img:hover {
+  background-color: rgb(195, 195, 195, 0.3);
+}
+.veiw {
+  width: 780px;
+  /* height: 200px; */
+  border-radius: 10px;
+  margin: 10px 9px 0px 9px;
+  border: rgb(93, 93, 93, 0.5) solid 1px;
+}
+/*初始化ul标签 */
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.veiw ul li {
+  height: 50px;
+  width: 780px;
+
+  border-bottom: rgb(111, 111, 111, 0.2) solid 1px;
+}
+ul li p {
+  margin: 0px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  width: 650px;
+  margin-left: 70px;
+  /* background-color: aqua; */
+  float: left;
+}
+ul li .rmbtn {
+  height: 40px;
+  width: 50px;
+  box-sizing: border-box;
+  float: left;
+  margin: 5px 5px;
+  border-radius: 5px;
+  border-style: none;
+  border: rgb(111, 111, 111, 0.3) solid 1px;
+  cursor: pointer;
+  user-select: none;
+}
+ul li .rmbtn:hover {
+  background-color: rgb(139, 139, 139);
+  color: white;
+}
